@@ -22,10 +22,19 @@
     <Filter Include="Header Files\Matrix">
       <UniqueIdentifier>{7f718dd2-cd6b-4f62-830e-59f527a57e82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Structures">
+      <UniqueIdentifier>{9440c876-ce71-48ff-b8e5-91c63c2d8a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{d55d6229-f61a-46f4-a114-6cbf1cb2b441}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\EngineMathLib.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Structures.cpp">
+      <Filter>Source Files\Structures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="include\Matrix4x4.h">
       <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TArray.h">
+      <Filter>Header Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMap.h">
+      <Filter>Header Files\Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

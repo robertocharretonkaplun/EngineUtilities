@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\EngineMathLib.cpp" />
+    <ClCompile Include="source\Structures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\EngineMath.h" />
@@ -139,6 +140,8 @@
     <ClInclude Include="include\Matrix3x3.h" />
     <ClInclude Include="include\Matrix4x4.h" />
     <ClInclude Include="include\Quaternion.h" />
+    <ClInclude Include="include\TArray.h" />
+    <ClInclude Include="include\TMap.h" />
     <ClInclude Include="include\Vector2.h" />
     <ClInclude Include="include\Vector3.h" />
     <ClInclude Include="include\Vector4.h" />
