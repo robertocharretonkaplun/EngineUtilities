@@ -30,7 +30,7 @@
 #include <iostream>
 #include "TArray.h"
 #include "TMap.h"
-
+#include "Structures/TSet.h"
 int main() {
 
 	// TArray Example
@@ -64,5 +64,18 @@ int main() {
   std::cout << "Key 3: " << MyMap[3] << std::endl;  ///< Acceder e imprimir el valor asociado con la clave 3.
 
   std::cout << "Size: " << MyMap.Num() << ", Capacity: " << MyMap.GetCapacity() << std::endl;  ///< Imprimir el tamaño y la capacidad del mapa.
-	return 0;
+	
+  // TSet
+  TSet<int> MySet;  ///< Crear una instancia de TSet para elementos enteros.
+  MySet.Add(1);  ///< Añadir elementos al conjunto.
+  MySet.Add(2);
+  MySet.Add(3);
+
+  MySet.Remove(2);  ///< Eliminar el elemento 2 del conjunto.
+
+  std::cout << "Contains 1: " << MySet.Contains(1) << std::endl;  ///< Verificar e imprimir si el conjunto contiene el elemento 1.
+  std::cout << "Contains 2: " << MySet.Contains(2) << std::endl;  ///< Verificar e imprimir si el conjunto contiene el elemento 2.
+
+  std::cout << "Size: " << MySet.Num() << ", Capacity: " << MySet.GetCapacity() << std::endl;  ///< Imprimir el tamaño y la capacidad del conjunto.
+  return 0;
 }
