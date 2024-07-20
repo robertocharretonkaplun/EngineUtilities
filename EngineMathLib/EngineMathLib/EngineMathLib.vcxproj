@@ -140,6 +140,8 @@
     <ClInclude Include="include\Matrix3x3.h" />
     <ClInclude Include="include\Matrix4x4.h" />
     <ClInclude Include="include\Quaternion.h" />
+    <ClInclude Include="include\Structures\TPair.h" />
+    <ClInclude Include="include\Structures\TSet.h" />
     <ClInclude Include="include\TArray.h" />
     <ClInclude Include="include\TMap.h" />
     <ClInclude Include="include\Vector2.h" />

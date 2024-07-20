@@ -68,5 +68,11 @@
     <ClInclude Include="include\TMap.h">
       <Filter>Header Files\Structures</Filter>
     </ClInclude>
+    <ClInclude Include="include\Structures\TSet.h">
+      <Filter>Header Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Structures\TPair.h">
+      <Filter>Header Files\Structures</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
