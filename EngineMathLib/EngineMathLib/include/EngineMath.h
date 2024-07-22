@@ -27,7 +27,7 @@
  * SOFTWARE.
 */
 #pragma once
-namespace EngineMathLib {
+namespace EngineUtilities {
 
   // Constantes matemáticas
   constexpr float PI = 3.14159265358979323846f;

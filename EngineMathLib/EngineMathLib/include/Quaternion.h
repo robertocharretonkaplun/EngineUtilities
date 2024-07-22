@@ -29,7 +29,7 @@
 #pragma once
 
 #include "EngineMath.h"
-namespace EngineMathLib {
+namespace EngineUtilities {
   /**
  * @brief A quaternion class.
  *
@@ -113,7 +113,7 @@ namespace EngineMathLib {
      * @return The magnitude of the quaternion.
      */
     float magnitude() const {
-      return EngineMathLib::sqrt(w * w + x * x + y * y + z * z);
+      return EngineUtilities::sqrt(w * w + x * x + y * y + z * z);
     }
 
     /**

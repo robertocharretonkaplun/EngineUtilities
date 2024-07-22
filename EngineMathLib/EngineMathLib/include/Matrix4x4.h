@@ -27,7 +27,7 @@
  * SOFTWARE.
 */
 #pragma once
-namespace EngineMathLib {
+namespace EngineUtilities {
   /**
  * @brief A 4x4 matrix class.
  *

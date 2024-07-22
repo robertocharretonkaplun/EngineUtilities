@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Structures">
       <UniqueIdentifier>{d55d6229-f61a-46f4-a114-6cbf1cb2b441}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Miscellaneous">
+      <UniqueIdentifier>{cd29ef42-28cf-4a85-9963-6f6cb80f0e85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\EngineMathLib.cpp">
@@ -42,9 +45,6 @@
       <Filter>Header Files\Vectors</Filter>
     </ClInclude>
     <ClInclude Include="include\Vector3.h">
-      <Filter>Header Files\Vectors</Filter>
-    </ClInclude>
-    <ClInclude Include="include\EngineMath.h">
       <Filter>Header Files\Vectors</Filter>
     </ClInclude>
     <ClInclude Include="include\Vector4.h">
@@ -73,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="include\Structures\TPair.h">
       <Filter>Header Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EngineMath.h">
+      <Filter>Header Files\Miscellaneous</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

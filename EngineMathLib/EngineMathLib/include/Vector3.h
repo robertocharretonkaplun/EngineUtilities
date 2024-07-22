@@ -28,7 +28,7 @@
 */
 #pragma once
 #include "EngineMath.h"
-namespace EngineMathLib {
+namespace EngineUtilities {
   /**
  * @brief A 3D vector class.
  *
@@ -96,7 +96,7 @@ namespace EngineMathLib {
      * @return The magnitude of the vector.
      */
     float magnitude() const {
-      return EngineMathLib::sqrt(x * x + y * y + z * z);
+      return EngineUtilities::sqrt(x * x + y * y + z * z);
     }
 
     /**

@@ -28,7 +28,7 @@
 */
 #pragma once
 
-namespace EngineMathLib {
+namespace EngineUtilities {
 #pragma once
 #include <iostream>
 
