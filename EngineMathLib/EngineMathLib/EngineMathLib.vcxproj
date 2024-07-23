@@ -135,18 +135,18 @@
     <ClCompile Include="source\Structures.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\EngineMath.h" />
-    <ClInclude Include="include\Matrix2x2.h" />
-    <ClInclude Include="include\Matrix3x3.h" />
-    <ClInclude Include="include\Matrix4x4.h" />
-    <ClInclude Include="include\Quaternion.h" />
+    <ClInclude Include="include\Matrix\Matrix2x2.h" />
+    <ClInclude Include="include\Matrix\Matrix3x3.h" />
+    <ClInclude Include="include\Matrix\Matrix4x4.h" />
+    <ClInclude Include="include\Structures\TArray.h" />
+    <ClInclude Include="include\Structures\TMap.h" />
     <ClInclude Include="include\Structures\TPair.h" />
     <ClInclude Include="include\Structures\TSet.h" />
-    <ClInclude Include="include\TArray.h" />
-    <ClInclude Include="include\TMap.h" />
-    <ClInclude Include="include\Vector2.h" />
-    <ClInclude Include="include\Vector3.h" />
-    <ClInclude Include="include\Vector4.h" />
+    <ClInclude Include="include\Utilities\EngineMath.h" />
+    <ClInclude Include="include\Vectors\Quaternion.h" />
+    <ClInclude Include="include\Vectors\Vector2.h" />
+    <ClInclude Include="include\Vectors\Vector3.h" />
+    <ClInclude Include="include\Vectors\Vector4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

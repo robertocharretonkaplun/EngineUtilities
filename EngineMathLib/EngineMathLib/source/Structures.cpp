@@ -26,10 +26,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 */
-
 #include <iostream>
-#include "TArray.h"
-#include "TMap.h"
+#include "Structures/TArray.h"
+#include "Structures/TMap.h"
 #include "Structures/TSet.h"
 
 #include <vector>

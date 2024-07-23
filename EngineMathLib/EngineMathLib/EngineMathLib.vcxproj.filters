@@ -41,41 +41,41 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Vector2.h">
-      <Filter>Header Files\Vectors</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Vector3.h">
-      <Filter>Header Files\Vectors</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Vector4.h">
-      <Filter>Header Files\Vectors</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Quaternion.h">
-      <Filter>Header Files\Vectors</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Matrix2x2.h">
+    <ClInclude Include="include\Matrix\Matrix2x2.h">
       <Filter>Header Files\Matrix</Filter>
     </ClInclude>
-    <ClInclude Include="include\Matrix3x3.h">
+    <ClInclude Include="include\Matrix\Matrix3x3.h">
       <Filter>Header Files\Matrix</Filter>
     </ClInclude>
-    <ClInclude Include="include\Matrix4x4.h">
+    <ClInclude Include="include\Matrix\Matrix4x4.h">
       <Filter>Header Files\Matrix</Filter>
     </ClInclude>
-    <ClInclude Include="include\TArray.h">
+    <ClInclude Include="include\Utilities\EngineMath.h">
+      <Filter>Header Files\Miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Structures\TArray.h">
       <Filter>Header Files\Structures</Filter>
     </ClInclude>
-    <ClInclude Include="include\TMap.h">
-      <Filter>Header Files\Structures</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Structures\TSet.h">
+    <ClInclude Include="include\Structures\TMap.h">
       <Filter>Header Files\Structures</Filter>
     </ClInclude>
     <ClInclude Include="include\Structures\TPair.h">
       <Filter>Header Files\Structures</Filter>
     </ClInclude>
-    <ClInclude Include="include\EngineMath.h">
-      <Filter>Header Files\Miscellaneous</Filter>
+    <ClInclude Include="include\Structures\TSet.h">
+      <Filter>Header Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vectors\Quaternion.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vectors\Vector2.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vectors\Vector3.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vectors\Vector4.h">
+      <Filter>Header Files\Vectors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
