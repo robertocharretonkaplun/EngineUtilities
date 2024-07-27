@@ -67,16 +67,12 @@ namespace EngineUtilities {
 		/**
 		 * @brief Constructor por defecto que inicializa el array con capacidad y tamaño cero.
 		 */
-		TArray()
-			: Data(nullptr), Capacity(0), Size(0)
-		{
-		}
+		TArray() : Data(nullptr), Capacity(0), Size(0)	{}
 
 		/**
 		 * @brief Destructor que libera la memoria asignada al array.
 		 */
-		~TArray()
-		{
+		~TArray()	{
 			delete[] Data;  ///< Liberar la memoria del array.
 		}
 

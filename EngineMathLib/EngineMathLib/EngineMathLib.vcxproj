@@ -132,12 +132,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\EngineMathLib.cpp" />
-    <ClCompile Include="source\Structures.cpp" />
+    <ClCompile Include="source\Memory.cpp" />
+    <ClCompile Include="source\MemoryExample1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\Structures.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Matrix\Matrix2x2.h" />
     <ClInclude Include="include\Matrix\Matrix3x3.h" />
     <ClInclude Include="include\Matrix\Matrix4x4.h" />
+    <ClInclude Include="include\Memory\TSharedPointer.h" />
+    <ClInclude Include="include\Memory\TStaticPtr.h" />
+    <ClInclude Include="include\Memory\TUniquePtr.h" />
+    <ClInclude Include="include\Memory\TWeakPointer.h" />
     <ClInclude Include="include\Structures\TArray.h" />
     <ClInclude Include="include\Structures\TMap.h" />
     <ClInclude Include="include\Structures\TPair.h" />
