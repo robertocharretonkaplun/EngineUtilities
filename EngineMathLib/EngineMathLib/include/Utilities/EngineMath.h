@@ -109,7 +109,7 @@ namespace EngineUtilities {
    * @param b El segundo valor.
    * @return El mayor de los dos valores dados.
    */
-  inline float max(float a, float b) {
+  inline float EMax(float a, float b) {
     return (a > b) ? a : b;
   }
 
@@ -120,7 +120,7 @@ namespace EngineUtilities {
    * @param b El segundo valor.
    * @return El menor de los dos valores dados.
    */
-  inline float min(float a, float b) {
+  inline float EMin(float a, float b) {
     return (a < b) ? a : b;
   }
 
