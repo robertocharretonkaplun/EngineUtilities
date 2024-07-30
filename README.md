@@ -1,98 +1,65 @@
-﻿# Biblioteca Matemática en C++
+﻿# EngineUtilities
 
-Esta biblioteca proporciona una serie de operaciones matemáticas básicas y utilidades para el manejo de vectores y matrices en C++. 
+EngineUtilities es una biblioteca de recursos matemáticos y estructuras de datos diseñada para motores de juegos personalizados. Proporciona una serie de utilidades para realizar operaciones matemáticas, manejar punteros, y trabajar con estructuras de datos comunes en el desarrollo de motores de juego.
 
-## Contenido
+## Contenido del Repositorio
 
-1. [Operaciones Matemáticas Generales](#operaciones-matemáticas-generales)
-2. [Clase `Vector2`](#clase-vector2)
-3. [Clase `Vector3`](#clase-vector3)
-4. [Instalación y Uso](#instalación-y-uso)
+### Include
+La carpeta `include` contiene los encabezados para las diversas clases y utilidades proporcionadas por la biblioteca.
 
-## Operaciones Matemáticas Generales
+#### Matrix
+Clases para manejar matrices de diferentes tamaños:
+- `Matrix2x2.h`
+- `Matrix3x3.h`
+- `Matrix4x4.h`
 
-Este módulo contiene funciones matemáticas básicas implementadas sin depender de la biblioteca estándar `<cmath>`. Las funciones incluyen:
+#### Memory
+Clases para manejar punteros inteligentes personalizados:
+- `TSharedPointer.h` - Implementación de un puntero compartido.
+- `TStaticPtr.h` - Implementación de un puntero estático.
+- `TUniquePtr.h` - Implementación de un puntero único.
+- `TWeakPointer.h` - Implementación de un puntero débil.
 
-- **`add`**: Suma dos números.
-- **`subtract`**: Resta dos números.
-- **`multiply`**: Multiplica dos números.
-- **`divide`**: Divide dos números.
-- **`sqrt`**: Calcula la raíz cuadrada de un número.
-- **`pow`**: Calcula la potencia de un número.
-- **`abs`**: Calcula el valor absoluto de un número.
+#### Structures
+Clases para manejar estructuras de datos comunes:
+- `TArray.h` - Implementación de un arreglo dinámico.
+- `TMap.h` - Implementación de un mapa (diccionario).
+- `TPair.h` - Implementación de un par.
+- `TSet.h` - Implementación de un conjunto.
 
-### Ejemplo de Código
+#### Utilities
+Utilidades matemáticas generales:
+- `EngineMath.h` - Funciones matemáticas generales para el motor.
+
+#### Vectors
+Clases para manejar vectores y cuaterniones:
+- `Quaternion.h` - Implementación de cuaterniones para rotaciones.
+- `Vector2.h` - Implementación de vectores en 2D.
+- `Vector3.h` - Implementación de vectores en 3D.
+- `Vector4.h` - Implementación de vectores en 4D.
+
+### Source
+La carpeta `source` contendría las implementaciones de las clases y funciones definidas en los archivos de encabezado. Asegúrate de explorar esta carpeta para obtener ejemplos y detalles adicionales sobre cómo utilizar estas utilidades.
+
+## Uso
+
+Para utilizar esta biblioteca en tu proyecto, simplemente incluye los archivos de encabezado necesarios y compila tu proyecto junto con los archivos de implementación. A continuación se muestra un ejemplo de cómo incluir y usar la clase `Vector3`:
 
 ```cpp
-#include "MathUtils.h"
+#include "Vectors/Vector3.h"
 
 int main() {
-    double result = MathUtils::sqrt(16.0);
-    std::cout << "La raíz cuadrada de 16 es: " << result << std::endl;
+    Vector3 v1(1.0f, 2.0f, 3.0f);
+    Vector3 v2(4.0f, 5.0f, 6.0f);
+    Vector3 result = v1 + v2;
+
+    std::cout << "Resultado: " << result.x << ", " << result.y << ", " << result.z << std::endl;
     return 0;
 }
 ```
 
-## Clase `Vector2`
+## Contribuciones
+Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, por favor abre un issue o envía un pull request con tus mejoras o correcciones.
 
-La clase `Vector2` representa un vector en 2D. Proporciona operaciones básicas como suma, resta y cálculo de la longitud.
-
-### Métodos Principales
-
-- **Constructor**: `Vector2(double x = 0.0, double y = 0.0)`
-- **Método `length`**: Calcula la longitud del vector.
-- **Método `normalize`**: Normaliza el vector.
-- **Método `dot`**: Calcula el producto punto entre dos vectores.
-
-### Ejemplo de Código
-
-```cpp
-#include "Vector2.h"
-
-int main() {
-    Vector2 v1(3.0, 4.0);
-    Vector2 v2(1.0, 2.0);
-    Vector2 result = v1 + v2;
-    std::cout << "La longitud de v1 es: " << v1.length() << std::endl;
-    return 0;
-}
-
-```
-
-## Clase `Vector3`
-
-La clase `Vector3` representa un vector en 3D y proporciona operaciones adicionales como el cálculo del producto cruz y la proyección sobre un eje.
-
-### Métodos Principales
-
-- **Constructor**: `Vector3(double x = 0.0, double y = 0.0, double z = 0.0)`
-- **Método `length`**: Calcula la longitud del vector.
-- **Método `normalize`**: Normaliza el vector.
-- **Método `cross`**: Calcula el producto cruz entre dos vectores.
-- **Método `dot`**: Calcula el producto punto entre dos vectores.
-- **Método `project`**: Proyecta el vector sobre un eje.
-
-### Ejemplo de Código
-
-```cpp
-#include "Vector3.h"
-
-int main() {
-    Vector3 v1(1.0, 2.0, 3.0);
-    Vector3 v2(4.0, 5.0, 6.0);
-    Vector3 crossProduct = v1.cross(v2);
-    std::cout << "El producto cruz de v1 y v2 es: (" 
-              << crossProduct.x << ", " 
-              << crossProduct.y << ", " 
-              << crossProduct.z << ")" << std::endl;
-    return 0;
-}
-```
-
-## Instalación y Uso
-
-Para instalar y usar la biblioteca:
-
-1. **Incluir los archivos de encabezado en tu proyecto**: `MathUtils.h`, `Vector2.h`, `Vector3.h`.
-2. **Incluir las implementaciones en tu proyecto**: `MathUtils.cpp`, `Vector2.cpp`, `Vector3.cpp`.
-3. **Compilar el proyecto** junto con los archivos de la biblioteca.
+## Licencia
+Este proyecto está licenciado bajo los términos de la licencia MIT. Consulta el archivo LICENSE para más detalles.
