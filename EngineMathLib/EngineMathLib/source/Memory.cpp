@@ -5,8 +5,8 @@
 
 using namespace EngineUtilities;
 
-class MyClass
-{
+class 
+MyClass {
 public:
 	MyClass(int value) : value(value)
 	{
@@ -29,6 +29,7 @@ private:
 
 int main()
 {
+
 	/*
 	// Sección 1: Uso de TSharedPointer
 	{
