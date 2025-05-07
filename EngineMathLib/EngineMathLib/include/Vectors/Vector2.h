@@ -37,7 +37,8 @@ namespace EngineUtilities {
    * basic vector operations such as addition, subtraction, scalar multiplication,
    * and normalization.
    */
-  class Vector2 {
+  class 
+  Vector2 {
   public:
     float x; /**< The x-coordinate of the vector. */
     float y; /**< The y-coordinate of the vector. */
@@ -65,7 +66,8 @@ namespace EngineUtilities {
      * @param other The vector to add.
      * @return The result of the addition.
      */
-    Vector2 operator+(const Vector2& other) const {
+    Vector2 
+    operator+(const Vector2& other) const {
       return Vector2(x + other.x, y + other.y);
     }
 
@@ -75,7 +77,8 @@ namespace EngineUtilities {
      * @param other The vector to subtract.
      * @return The result of the subtraction.
      */
-    Vector2 operator-(const Vector2& other) const {
+    Vector2 
+    operator-(const Vector2& other) const {
       return Vector2(x - other.x, y - other.y);
     }
 
@@ -85,7 +88,8 @@ namespace EngineUtilities {
      * @param scalar The scalar to multiply by.
      * @return The result of the multiplication.
      */
-    Vector2 operator*(float scalar) const {
+    Vector2 
+    operator*(float scalar) const {
       return Vector2(x * scalar, y * scalar);
     }
 
@@ -94,7 +98,8 @@ namespace EngineUtilities {
      *
      * @return The magnitude of the vector.
      */
-    float magnitude() const {
+    float 
+    magnitude() const {
       return EngineUtilities::sqrt(x * x + y * y);
     }
 
@@ -103,12 +108,22 @@ namespace EngineUtilities {
      *
      * @return The normalized vector.
      */
-    Vector2 normalize() const {
+    Vector2 
+    normalize() const {
       float mag = magnitude();
       if (mag == 0) {
         return Vector2(0, 0);
       }
       return Vector2(x / mag, y / mag);
+    }
+
+    /**
+     * @brief Returns a pointer to the quaternion's data.
+     *
+     * @return Pointer to the first element (x, y, z).
+     */
+    const float* data() const {
+      return &x;
     }
   };
 }

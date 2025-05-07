@@ -114,5 +114,14 @@ namespace EngineUtilities {
       }
       return Vector4(x / mag, y / mag, z / mag, w / mag);
     }
+
+    /**
+     * @brief Returns a pointer to the quaternion's data.
+     *
+     * @return Pointer to the first element (x, y, z, w).
+     */
+    const float* data() const {
+      return &x;
+    }
   };
 }
