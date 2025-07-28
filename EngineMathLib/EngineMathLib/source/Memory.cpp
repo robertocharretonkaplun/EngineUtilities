@@ -3,7 +3,7 @@
 #include "Memory/TUniquePtr.h"
 #include "Memory/TWeakPointer.h"
 
-using namespace EngineUtilities;
+using namespace EU;
 
 class 
 MyClass {

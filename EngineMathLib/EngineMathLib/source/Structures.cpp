@@ -34,7 +34,7 @@
 #include <vector>
 int main() {
 	// TArray Example
-  EngineUtilities::TArray<int> MyArray;
+  EU::TArray<int> MyArray;
   MyArray.Add(1);
   MyArray.Add(2);
   MyArray.Add(3);
@@ -53,7 +53,7 @@ int main() {
   std::cout << "Size: " << MyArray.Num() << ", Capacity: " << MyArray.GetCapacity() << std::endl;
 
   // TMap Example
-  EngineUtilities::TMap<int, std::string> MyMap;  ///< Crear una instancia de TMap para claves enteras y valores string.
+  EU::TMap<int, std::string> MyMap;  ///< Crear una instancia de TMap para claves enteras y valores string.
   MyMap.Add(1, "One");  ///< Añadir pares clave-valor al mapa.
   MyMap.Add(2, "Two");
   MyMap.Add(3, "Three");
@@ -66,7 +66,7 @@ int main() {
   std::cout << "Size: " << MyMap.Num() << ", Capacity: " << MyMap.GetCapacity() << std::endl;  ///< Imprimir el tamaño y la capacidad del mapa.
 	
   // TSet
-  EngineUtilities::TSet<int> MySet;  ///< Crear una instancia de TSet para elementos enteros.
+  EU::TSet<int> MySet;  ///< Crear una instancia de TSet para elementos enteros.
   MySet.Add(1);  ///< Añadir elementos al conjunto.
   MySet.Add(2);
   MySet.Add(3);

@@ -30,7 +30,7 @@
 #include "TSharedPointer.h"
 
 namespace
-	EngineUtilities {
+	EU {
 	/**
 		 * @brief Clase TWeakPointer para observar objetos gestionados por TSharedPointer sin aumentar el recuento de referencias.
 		 *

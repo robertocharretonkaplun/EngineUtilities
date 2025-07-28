@@ -28,7 +28,7 @@
 */
 #pragma once
 
-namespace EngineUtilities {
+namespace EU {
   /**
  * @brief Clase TUniquePtr para manejo exclusivo de memoria.
  *

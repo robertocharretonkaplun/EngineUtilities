@@ -28,7 +28,7 @@
 */
 #pragma once
 
-namespace EngineUtilities {
+namespace EU {
 	/**
 	 * @brief Clase TSharedPointer para manejar la gestión de memoria compartida.
 	 *

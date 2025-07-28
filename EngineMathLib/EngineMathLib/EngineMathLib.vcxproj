@@ -159,6 +159,7 @@
     <ClInclude Include="include\Structures\TPair.h" />
     <ClInclude Include="include\Structures\TSet.h" />
     <ClInclude Include="include\Utilities\EngineMath.h" />
+    <ClInclude Include="include\Utilities\MeshComponent.h" />
     <ClInclude Include="include\Vectors\Quaternion.h" />
     <ClInclude Include="include\Vectors\Vector2.h" />
     <ClInclude Include="include\Vectors\Vector3.h" />

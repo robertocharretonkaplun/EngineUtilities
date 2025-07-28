@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2024 Roberto Charreton
+ * Copyright (c) 2025 Roberto Charreton
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@
  * SOFTWARE.
 */
 #pragma once
-namespace EngineUtilities {
+namespace EU {
 
   // Constantes matemáticas
   constexpr float PI = 3.14159265358979323846f;

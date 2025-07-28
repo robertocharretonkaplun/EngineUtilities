@@ -101,5 +101,8 @@
     <ClInclude Include="include\Memory\TWeakPointer.h">
       <Filter>Header Files\Memory</Filter>
     </ClInclude>
+    <ClInclude Include="include\Utilities\MeshComponent.h">
+      <Filter>Header Files\Miscellaneous</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@
  * SOFTWARE.
 */
 #pragma once
-namespace EngineUtilities {
+namespace EU {
   /**
  * @brief Clase TStaticPtr para manejo de un puntero estático.
  *
