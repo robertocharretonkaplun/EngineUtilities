@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2024 Roberto Charreton
+ * Copyright (c) 2025 Roberto Charreton
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,8 @@
 #pragma once
 #include "TSharedPointer.h"
 
-namespace EngineUtilities {
+namespace
+	EngineUtilities {
 	/**
 		 * @brief Clase TWeakPointer para observar objetos gestionados por TSharedPointer sin aumentar el recuento de referencias.
 		 *
@@ -38,8 +39,7 @@ namespace EngineUtilities {
 		 * aún existe.
 		 */
 	template<typename T>
-	class TWeakPointer
-	{
+	class TWeakPointer {
 	public:
 		/**
 		 * @brief Constructor por defecto.
@@ -51,18 +51,18 @@ namespace EngineUtilities {
 		 *
 		 * @param sharedPtr TSharedPointer desde el cual se observará el objeto.
 		 */
-		TWeakPointer(const TSharedPointer<T>& sharedPtr) 
-		: ptr(sharedPtr.ptr), refCount(sharedPtr.refCount) {}
+		TWeakPointer(const TSharedPointer<T>& sharedPtr)
+			: ptr(sharedPtr.ptr), refCount(sharedPtr.refCount) {
+		}
 
 		/**
 		 * @brief Convertir TWeakPointer a TSharedPointer.
 		 *
 		 * @return Un TSharedPointer al objeto gestionado, o nullptr si el objeto ha sido destruido.
 		 */
-		TSharedPointer<T> lock() const
-		{
-			if (refCount && *refCount > 0)
-			{
+		TSharedPointer<T>
+			lock() const {
+			if (refCount && *refCount > 0) {
 				return TSharedPointer<T>(ptr, refCount);
 			}
 			return TSharedPointer<T>();

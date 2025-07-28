@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2024 Roberto Charreton
+ * Copyright (c) 2025 Roberto Charreton
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -36,8 +36,7 @@ namespace EngineUtilities {
  * básicas de manejo de memoria.
  */
   template<typename T>
-  class TStaticPtr
-  {
+  class TStaticPtr {
   public:
     /**
      * @brief Inicializa el puntero estático al objeto.
@@ -51,10 +50,8 @@ namespace EngineUtilities {
      *
      * @param rawPtr Puntero crudo al objeto que se va a gestionar.
      */
-    explicit TStaticPtr(T* rawPtr)
-    {
-      if (instance != nullptr)
-      {
+    explicit TStaticPtr(T* rawPtr) {
+      if (instance != nullptr) {
         delete instance;
       }
       instance = rawPtr;
@@ -65,10 +62,8 @@ namespace EngineUtilities {
      *
      * Libera la memoria del objeto gestionado si es la última instancia.
      */
-    ~TStaticPtr()
-    {
-      if (instance != nullptr)
-      {
+    ~TStaticPtr() {
+      if (instance != nullptr) {
         delete instance;
         instance = nullptr;
       }
@@ -79,8 +74,8 @@ namespace EngineUtilities {
      *
      * @return Puntero crudo al objeto gestionado.
      */
-    static T* get()
-    {
+    static T*
+      get() {
       return instance;
     }
 
@@ -89,8 +84,8 @@ namespace EngineUtilities {
      *
      * @return true si el puntero es nulo, false en caso contrario.
      */
-    static bool isNull()
-    {
+    static bool
+      isNull() {
       return instance == nullptr;
     }
 
@@ -101,10 +96,9 @@ namespace EngineUtilities {
      *
      * @param rawPtr Puntero crudo al nuevo objeto que se va a gestionar.
      */
-    static void reset(T* rawPtr = nullptr)
-    {
-      if (instance != nullptr)
-      {
+    static void
+      reset(T* rawPtr = nullptr) {
+      if (instance != nullptr) {
         delete instance;
       }
       instance = rawPtr;

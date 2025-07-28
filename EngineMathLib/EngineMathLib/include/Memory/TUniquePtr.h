@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2024 Roberto Charreton
+ * Copyright (c) 2025 Roberto Charreton
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -37,8 +37,7 @@ namespace EngineUtilities {
  * cualquier momento.
  */
   template<typename T>
-  class TUniquePtr
-  {
+  class TUniquePtr {
   public:
     /**
      * @brief Constructor por defecto.
@@ -61,8 +60,7 @@ namespace EngineUtilities {
      *
      * @param other Otro objeto TUniquePtr del mismo tipo T.
      */
-    TUniquePtr(TUniquePtr<T>&& other) noexcept : ptr(other.ptr)
-    {
+    TUniquePtr(TUniquePtr<T>&& other) noexcept : ptr(other.ptr) {
       other.ptr = nullptr;
     }
 
@@ -75,10 +73,9 @@ namespace EngineUtilities {
      * @param other Otro objeto TUniquePtr del mismo tipo T.
      * @return Referencia al objeto TUniquePtr actual.
      */
-    TUniquePtr<T>& operator=(TUniquePtr<T>&& other) noexcept
-    {
-      if (this != &other)
-      {
+    TUniquePtr<T>&
+      operator=(TUniquePtr<T>&& other) noexcept {
+      if (this != &other) {
         // Liberar el objeto actual
         delete ptr;
 
@@ -94,8 +91,7 @@ namespace EngineUtilities {
      *
      * Libera la memoria del objeto gestionado.
      */
-    ~TUniquePtr()
-    {
+    ~TUniquePtr() {
       delete ptr;
     }
 
@@ -108,21 +104,30 @@ namespace EngineUtilities {
      *
      * @return Referencia al objeto gestionado.
      */
-    T& operator*() const { return *ptr; }
+    T&
+      operator*() const {
+      return *ptr;
+    }
 
     /**
      * @brief Operador de acceso a miembros.
      *
      * @return Puntero al objeto gestionado.
      */
-    T* operator->() const { return ptr; }
+    T*
+      operator->() const {
+      return ptr;
+    }
 
     /**
      * @brief Obtener el puntero crudo.
      *
      * @return Puntero crudo al objeto gestionado.
      */
-    T* get() const { return ptr; }
+    T*
+      get() const {
+      return ptr;
+    }
 
     /**
      * @brief Liberar la propiedad del puntero crudo.
@@ -131,8 +136,8 @@ namespace EngineUtilities {
      *
      * @return Puntero crudo al objeto gestionado.
      */
-    T* release()
-    {
+    T*
+      release() {
       T* oldPtr = ptr;
       ptr = nullptr;
       return oldPtr;
@@ -145,8 +150,8 @@ namespace EngineUtilities {
      *
      * @param rawPtr Puntero crudo al nuevo objeto que se va a gestionar.
      */
-    void reset(T* rawPtr = nullptr)
-    {
+    void
+      reset(T* rawPtr = nullptr) {
       delete ptr;
       ptr = rawPtr;
     }
@@ -156,8 +161,8 @@ namespace EngineUtilities {
      *
      * @return true si el puntero es nulo, false en caso contrario.
      */
-    bool isNull() const
-    {
+    bool
+      isNull() const {
       return ptr == nullptr;
     }
   private:
@@ -173,8 +178,8 @@ namespace EngineUtilities {
    * @return Un objeto TUniquePtr gestionando un nuevo objeto de tipo T.
    */
   template<typename T, typename... Args>
-  TUniquePtr<T> MakeUnique(Args... args)
-  {
+  TUniquePtr<T>
+    MakeUnique(Args... args) {
     return TUniquePtr<T>(new T(args...));
   }
 
@@ -193,7 +198,7 @@ namespace EngineUtilities {
       std::cout << "MyClass destructor: " << value << std::endl;
     }
 
-    
+
     void display() const
     {
       std::cout << "Value: " << value << std::endl;
